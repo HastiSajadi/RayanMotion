@@ -1,101 +1,144 @@
+"use client";
+import { motion } from "framer-motion";
+import { FaCheck, FaPiggyBank, FaRegUser } from "react-icons/fa";
+import icon1 from "@/public/Icons/1.svg";
+import icon2 from "@/public/Icons/2.svg";
+import icon3 from "@/public/Icons/3.svg";
+import icon4 from "@/public/Icons/4.svg";
+import icon5 from "@/public/Icons/5.svg";
+import icon6 from "@/public/Icons/6.svg";
+import logo from "@/public/Icons/logo.svg";
+import zeemano from "@/public/Icons/zeemano.svg";
+import bodyspinner from "@/public/Icons/bodyspinner.svg";
+
+import joopa from "@/public/Icons/joopa.svg";
+import koton from "@/public/Icons/koton.svg";
+
+import fodo from "@/public/Icons/fodo.svg";
 import Image from "next/image";
+import { IoIosFlash } from "react-icons/io";
+import { FaShield } from "react-icons/fa6";
+
+const icons = [icon1, icon2, icon3, icon4, icon5, icon6];
+const logos = [fodo, zeemano, bodyspinner, joopa, koton];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div
+        className="bg-white h-[100vh] flex  w-full justify-center items-center"
+        dir="rtl"
+      >
+        <div className=" h-[100vh] lg:h-[30vh]  flex flex-col lg:flex-row items-center gap-8 ">
+          <div className="flex flex-col relative justify-end h-[150px] items-center gap-2 text-[16px] w-[100px] text-gray-400">
+            <div className="w-[80px] h-[80px] border-[4px]  absolute top-0 bottom-0 my-auto border-gray-200 bg-white shadow-md rounded-full flex items-center justify-center ">
+              <FaRegUser size={30} color="green" />
+            </div>
+            <h1>گیرنده</h1>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="relative">
+            <div className="w-[100px]  text-[25px] text-black ">
+              ...............
+            </div>
+            <div className="w-[100px] h-[8px] absolute top-[19px] opacity-80 bg-green-400 rounded-full "></div>
+          </div>
+
+          <div className=" h-[50vh] overflow-hidden">
+            <div className="flex flex-col justify-between mt-11 items-center h-full py-1 ">
+              {icons.map((icon, index) => (
+                <div className="w-[60px] h-[60px] border-[1px]  bg-white shadow-md rounded-full flex items-center justify-center ">
+                  <Image
+                    key={index}
+                    src={icon}
+                    alt={`icon-${index}`}
+                    className="w-6 h-6"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="w-[100px]  text-[25px] text-black ">
+              ...............
+            </div>
+            <div className="w-[100px] h-[8px] absolute top-[19px] opacity-80 bg-green-400 rounded-full "></div>
+          </div>
+
+          <div className="flex flex-col justify-end relative w-[250px]  h-[50vh]">
+            <div className="w-[200px] h-[200px] absolute left-0 right-0 top-0 bottom-0 my-auto mx-auto  bg-white rounded-full border-[4px] border-gray-200 flex justify-center items-center ">
+              <Image src={logo} alt="rayan" />
+            </div>
+            <div className="flex justify-center items-center gap-5 mt-5 mb-10">
+              <div className="flex flex-col justify-center items-center gap-2 text-[10px] w-[100px] text-gray-400">
+                <div className="w-[40px] h-[40px] bg-white border-[1px] border-gray-200 shadow-md rounded-full flex justify-center items-center ">
+                  <IoIosFlash color="#B6BFCD" size={24} />
+                </div>
+                <h1>سریع</h1>
+              </div>
+
+              <div className="flex flex-col justify-center items-center gap-2 text-[10px] w-[100px] text-gray-400">
+                <div className="w-[40px] h-[40px] relative bg-white border-[1px] border-gray-200 shadow-md rounded-full ">
+                  <FaShield
+                    color="#B6BFCD"
+                    size={20}
+                    className="absolute left-0 right-0 mx-auto top-0 bottom-0 my-auto"
+                  />
+                  <FaCheck
+                    color="white"
+                    size={14}
+                    className="absolute left-0 right-0 mx-auto top-0 bottom-0 my-auto"
+                  />
+                </div>
+                <h1>قابل اعتماد</h1>
+              </div>
+              <div className="flex flex-col justify-center items-center gap-2 text-[10px] w-[100px] text-gray-400">
+                <div className="w-[40px] h-[40px] bg-white border-[1px] border-gray-200 shadow-md rounded-full flex justify-center items-center ">
+                  <FaPiggyBank color="#B6BFCD" size={20} />
+                </div>
+                <h1>مقرون به‌صرفه</h1>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="w-[100px]  text-[25px] text-black ">
+              ...............
+            </div>
+            <div className="w-[100px] h-[8px] absolute top-[19px] opacity-80 bg-green-400 rounded-full "></div>
+          </div>
+
+          <div className=" h-[50vh] overflow-hidden">
+            <div className="flex flex-col justify-between items-center h-full py-1 ">
+              {logos.map((icon, index) => (
+                <div className="w-[80px] h-[80px] border-[1px]  bg-white shadow-md rounded-full flex items-center justify-center ">
+                  <Image
+                    key={index}
+                    src={icon}
+                    alt={`icon-${index}`}
+                    className="w-14 h-w-14"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="w-[100px]  text-[25px] text-black ">
+              ...............
+            </div>
+            <div className="w-[100px] h-[8px] absolute top-[19px] opacity-80 bg-green-400 rounded-full "></div>
+          </div>
+
+          <div className="flex flex-col relative justify-end h-[150px] items-center gap-2 text-[16px] w-[100px] text-gray-400">
+            <div className="w-[80px] h-[80px] border-[4px] absolute top-0 bottom-0 my-auto border-gray-200 bg-white shadow-md rounded-full flex items-center justify-center ">
+              <FaRegUser size={30} color="green" />
+            </div>
+            <h1>فرستنده</h1>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </>
   );
 }

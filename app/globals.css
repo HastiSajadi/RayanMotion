@@ -2,26 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  direction: rtl;
+  font-family: YekanBakhFaNum, sans-serif;
+}
+
+#Fa {
+  font-family: YekanBakhNoEn !important ;
+  font-family: YekanBakhFaNum, sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+@font-face {
+  font-family: YekanBakh;
+  src: url("../public/font/YekanBakh-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: YekanBakhFaNum;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/font/YekanBakhFaNum-Regular.woff") format("woff"),
+    url("../public/font/YekanBakhFaNum-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: YekanBakhNoEn;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/font/YekanBakhNoEn-Regular.woff") format("woff"),
+    url("../public/font/YekanBakhNoEn-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: YekanBakhBold;
+  font-style: bold;
+  font-weight: bold;
+  src: url("../public/font/YekanBakh-Bold.woff2") format("woff2");
 }
