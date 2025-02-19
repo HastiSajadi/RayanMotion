@@ -19,7 +19,7 @@ import { IoIosFlash } from "react-icons/io";
 
 const icons = [icon1, icon2, icon3, icon4, icon5, icon6];
 const logos = [fodo, zeemano, bodyspinner, joopa, koton];
-const MobileNimation = () => {
+const MobileAnimation = () => {
   const [circleComplete, setCircleComplete] = useState(false);
   const [senderComplete, setSenderComplete] = useState(false);
   const [iconComlete, setIconComplete] = useState(false);
@@ -500,4 +500,4 @@ const MobileNimation = () => {
   );
 };
 
-export default MobileNimation;
+export default MobileAnimation;

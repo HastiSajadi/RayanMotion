@@ -1,7 +1,7 @@
 "use client";
 
 import DesktopAnimation from "@/components/desktop";
-import MobileNimation from "@/components/mobile";
+import MobileAnimation from "@/components/mobile";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <div>
-        {isMobile ? <MobileNimation /> : <DesktopAnimation />}
+        {isMobile ? <MobileAnimation /> : <DesktopAnimation />}
         
       </div>
     </>
