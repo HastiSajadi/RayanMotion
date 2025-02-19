@@ -17,7 +17,10 @@ export default function Home() {
   }, []);
   return (
     <>
-      <div>{isMobile ? <MobileNimation /> : <DesktopAnimation />}</div>
+      <div>
+        {isMobile ? <MobileNimation /> : <DesktopAnimation />}
+        
+      </div>
     </>
   );
 }
