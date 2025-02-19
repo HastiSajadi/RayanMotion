@@ -489,6 +489,7 @@ const MobileAnimation = () => {
                   animate={receiverStart ? "animate" : "initial"}
                   transition={{ duration: 1 }}
                   stroke="#6EE499"
+                  strokeLinecap="round"
                 />
               </svg>
             </motion.div>
